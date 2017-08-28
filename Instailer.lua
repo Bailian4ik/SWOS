@@ -22,5 +22,3 @@ local file = io.open("/autorun.lua", "w")
 file:write("dofile(\"/SWOS/OS.lua\")")
 file:close()
 shell.execute("reboot")
-
-
