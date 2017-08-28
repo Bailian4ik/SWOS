@@ -1,3 +1,3 @@
 local file = io.open("/autorun.lua", "w")
-file:write("dofile(\"/test.lua\")")
+file:write("dofile(\"/OS.lua\")")
 file:close()
