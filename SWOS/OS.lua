@@ -1,7 +1,7 @@
 forms=require("forms")
 local shell = require("shell")
 
-sheell.execute("resolution 160 42");
+shell.execute("resolution 160 42");
  
 Form1=forms.addForm()          -- создаем основную форму
  
