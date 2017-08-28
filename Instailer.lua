@@ -16,12 +16,11 @@ print("Скачивание SWOS")
 
 wget("https://raw.githubusercontent.com/Bailian4ik/SWOS/master/SWOS/OS.lua","/SWOS/OS.lua")
 
+print("Установка завершена!")
+sleep(1)
 local file = io.open("/autorun.lua", "w")
 file:write("dofile(\"/SWOS/OS.lua\")")
 file:close()
-
-print("Установка завершена!")
-sleep(1)
 shell.execute("reboot")
 
 
