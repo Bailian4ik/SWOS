@@ -12,8 +12,12 @@ local function wget(url, path)
 	shell.execute("wget " ..url .. " " .. path .. " -fq")
 end
 
-print("123")
+print("Скачивание SWOS")
 
---local file = io.open("/autorun.lua", "w")
---file:write("dofile(\"/OS.lua\")")
---file:close()
+wget("https://raw.githubusercontent.com/Bailian4ik/SWOS/master/SWOS/OS.lua","/SWOS/OS.lua")
+
+local file = io.open("/autorun.lua", "w")
+file:write("dofile(\"/SWOS/OS.lua\")")
+file:close()
+
+
