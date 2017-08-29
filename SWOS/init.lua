@@ -8,7 +8,7 @@ do
   local unicode = unicode
 
   -- Runlevel information.
-  local runlevel, shutdown = "S", computer.shutdown0xFFFFFF
+  local runlevel, shutdown = "S", computer.shutdown
   computer.runlevel = function() return runlevel end
   computer.shutdown = function(reboot)
     runlevel = reboot and 6 or 0
@@ -179,9 +179,11 @@ end
 -- SW OS INIT
 do
   local component = require("component")
+  local shell = require("shell")
   local gpu = component.gpu
   gpu.setForeground(0xFFFFFF)
   gpu.setBackground(0x262626)
+  shell.execute("resolution 160 42")
 end
 
 local function motd()
